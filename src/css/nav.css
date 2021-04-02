@@ -82,17 +82,20 @@ html.is-clipped--nav {
 
 .nav-menu {
   min-height: 100%;
-  padding: 0.5rem 0.75rem;
+  padding: 0 0.75rem 0.5rem;
   line-height: var(--nav-line-height);
   position: relative;
 }
 
 .nav-menu h3.title {
+  display: flex;
+  align-items: center;
+  height: var(--toolbar-height);
+  box-shadow: 0 1px 0 #e1e1e1;
   color: var(--nav-heading-font-color);
-  font-size: inherit;
+  font-size: 1rem;
   font-weight: var(--body-font-weight-bold);
   margin: 0;
-  padding: 0.25em 0 0.125em;
 }
 
 .nav-menu a {
@@ -100,17 +103,51 @@ html.is-clipped--nav {
 }
 
 .nav-list {
-  margin: 0 0 0 0.75rem;
+  list-style: none;
+  margin: 0;
   padding: 0;
 }
 
-.nav-menu > .nav-list + .nav-list {
-  margin-top: 0.5rem;
+.nav-item[data-depth="2"] .nav-list {
+  margin-left: 0.75rem;
 }
 
 .nav-item {
   list-style: none;
-  margin-top: 0.5em;
+  margin: 0;
+}
+
+.nav-item[data-depth="1"] {
+  margin-top: 0.9rem;
+}
+
+.nav-link {
+  display: block;
+  color: #495057;
+  background-color: transparent;
+  font-size: 0.78rem;
+  border-radius: 0.3125rem;
+  padding: 0.45rem 0.83331rem;
+  margin: 0;
+}
+
+.nav-item[data-depth="1"] > .nav-link {
+  color: var(--color-jet-70);
+  font-weight: var(--body-font-weight-bold);
+  /* font-size: 0.722rem; */
+  text-transform: uppercase;
+  padding: 0.45rem 0.83331rem;
+  margin: 0;
+}
+
+.is-current-page > .nav-link {
+  color: var(--link-font-color);
+  background-color: rgba(55, 125, 255, 0.1);
+}
+
+a.nav-link:hover {
+  color: var(--link_hover-font-color) !important;
+  text-decoration: none;
 }
 
 /* adds some breathing room below a nested list */
@@ -122,10 +159,6 @@ html.is-clipped--nav {
 .nav-item[data-depth="0"] > .nav-list:first-child {
   display: block;
   margin: 0;
-}
-
-.nav-item:not(.is-active) > .nav-list {
-  display: none;
 }
 
 .nav-item-toggle {
@@ -142,11 +175,6 @@ html.is-clipped--nav {
 
 .nav-item.is-active > .nav-item-toggle {
   transform: rotate(90deg);
-}
-
-.is-current-page > .nav-link,
-.is-current-page > .nav-text {
-  font-weight: var(--body-font-weight-bold);
 }
 
 .nav-panel-explore {

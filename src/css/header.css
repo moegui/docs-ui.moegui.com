@@ -23,7 +23,12 @@ body {
 
 .navbar-brand {
   display: flex;
-  padding-left: 1rem;
+  align-items: center;
+  padding-left: 0.75rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  margin-right: 0;
+  white-space: nowrap;
 }
 
 .navbar-brand .navbar-item:first-child,
@@ -32,6 +37,10 @@ body {
   padding: 0;
   color: var(--navbar-font-color);
   font-size: calc(22 / var(--rem-base) * 1rem);
+}
+
+.navbar-brand > img {
+  width: 7.5rem;
 }
 
 .navbar-brand .separator {
