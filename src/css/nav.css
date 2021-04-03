@@ -92,10 +92,10 @@ html.is-clipped--nav {
   align-items: center;
   min-height: var(--toolbar-height);
   margin: 0;
-  padding: calc(12.5/var(--rem-base)*1rem) 0;
+  padding: calc(12.5 / var(--rem-base) * 1rem) 0;
   box-shadow: 0 1px 0 #e1e1e1;
   color: var(--nav-heading-font-color);
-  font-size: calc(15/var(--rem-base)*1rem);
+  font-size: calc(15 / var(--rem-base) * 1rem);
   font-weight: var(--body-font-weight-bold);
 }
 
