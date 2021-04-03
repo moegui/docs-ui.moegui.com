@@ -90,12 +90,13 @@ html.is-clipped--nav {
 .nav-menu h3.title {
   display: flex;
   align-items: center;
-  height: var(--toolbar-height);
+  min-height: var(--toolbar-height);
+  margin: 0;
+  padding: calc(12.5/var(--rem-base)*1rem) 0;
   box-shadow: 0 1px 0 #e1e1e1;
   color: var(--nav-heading-font-color);
-  font-size: 1rem;
+  font-size: calc(15/var(--rem-base)*1rem);
   font-weight: var(--body-font-weight-bold);
-  margin: 0;
 }
 
 .nav-menu a {
@@ -209,6 +210,7 @@ a.nav-link:hover {
 
 .nav-panel-explore .context .version {
   display: flex;
+  flex-shrink: 0;
   align-items: inherit;
 }
 
